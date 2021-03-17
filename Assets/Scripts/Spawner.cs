@@ -19,8 +19,6 @@ public class Spawner : MonoBehaviour{
     void Update(){
         timer += Time.deltaTime;
 
-        Debug.Log(randomTime);
-
         obstaclesCount = GameObject.FindGameObjectsWithTag(objectToSpawn.tag).Length;
         if(obstaclesCount < howManyObstacles && timer >= timeToCreate[randomTime]){
             if(randomTime == 0 && obstaclesCount > 2) randomTime = 1;

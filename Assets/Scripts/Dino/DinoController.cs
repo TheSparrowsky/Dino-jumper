@@ -39,7 +39,7 @@ public class DinoController : MonoBehaviour{
             isGround = true;
             dinoAnim.SetBool("isJumping", false);
         }else{
-            Debug.Log("You died!");
+            Time.timeScale = 0;
         } 
     }
 }
