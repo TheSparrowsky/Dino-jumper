@@ -3,15 +3,19 @@
 public class DinoController : MonoBehaviour{
 
     [SerializeField]private Vector2 jumpForce;
+    [SerializeField]private AudioClip jumpClip;
+    [SerializeField]private AudioClip deathClip;
 
     private bool isGround = true;
 
     private Animator dinoAnim;
     private Rigidbody2D dinoRb;
+    private AudioSource dinoAudio;
 
     private void Start() {
         dinoRb = GetComponent<Rigidbody2D>();
         dinoAnim = GetComponent<Animator>();
+        dinoAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -30,6 +34,10 @@ public class DinoController : MonoBehaviour{
             dinoAnim.SetBool("isJumping", true);
             dinoRb.AddForce(jumpForce, ForceMode2D.Impulse);
             isGround = false;
+
+            dinoAudio.clip = jumpClip;
+            dinoAudio.Play();
+
         }
 
     }
@@ -39,6 +47,8 @@ public class DinoController : MonoBehaviour{
             isGround = true;
             dinoAnim.SetBool("isJumping", false);
         }else{
+            dinoAudio.clip = deathClip;
+            dinoAudio.Play();
             Time.timeScale = 0;
         } 
     }

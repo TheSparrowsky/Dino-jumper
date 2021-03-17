@@ -1,5 +1,11 @@
+[ARTS]
 https://opengameart.org/content/free-dino-sprites
 https://opengameart.org/content/several-scrolling-backgrounds-and-layerable-runners
 https://opengameart.org/content/cactus-6
 https://opengameart.org/content/grumpy-bee-enemy-game-character
 https://opengameart.org/content/dypkeed-font
+
+[SOUNDS]
+https://opengameart.org/content/soundpack-02
+https://opengameart.org/content/oldschool-win-and-die-jump-and-run-sounds
+https://opengameart.org/content/hungry-dino-9-chiptune-tracks-10-sfx
